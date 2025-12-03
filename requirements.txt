@@ -1,0 +1,7 @@
+pytest
+pytest-xdist
+pytest-rerunfailures
+allure-pytest
+
+playwright==1.55.0
+pytest-playwright==0.6.2
