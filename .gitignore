@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+*.db
+*.sqlite3
+
+# Virtual env
+env/
+venv/
+.idea/
+.vscode/
+
+# Playwright stuff
+playwright-report/
+test-results/
+blob-report/
+*.trace.zip
+*.webm
+*.png
+*.jpg
+*.jpeg
+
+# Pytest cache
+.pytest_cache/
+
+# Allure reports (если будешь использовать)
+allure-results/
+allure-report/
+
+# OS / misc
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+*.env
+secrets.json
+config_local.yaml
+
+# Bot tokens / keys (если будут)
+token.txt
+api_key.txt
+
+# Node (если ставил playwright через npm)
+node_modules/
+
+# Build artifacts
+dist/
+build/
