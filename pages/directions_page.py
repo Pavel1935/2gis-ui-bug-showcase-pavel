@@ -35,5 +35,21 @@ class DirectionsPage(BasePage):
         suggestion.wait_for(state="visible", timeout=timeout)
         suggestion.click()
 
+    def enter_to_tbilisi(self, timeout: int = 10_000):
+        to_input = self.page.locator(DirectionsLocators.TO_INPUT)
+        to_input.click()
+        # печатаем по одному слову
+        for ch in "Тбилист, Город":
+            to_input.type(ch, delay=120)
+        to_input.fill(Constants.LOCATORS_TO_1)
+
+        suggestion = self.page.locator(DirectionsLocators.TO_SUGGESTION_TBILISI)
+        suggestion.wait_for(state="visible", timeout=timeout)
+        suggestion.click()
+
     def wait_for_error(self, timeout: int = 10_000):
-        self.wait_for_text("Что-то пошло не так", timeout)
+        try:
+            self.wait_for_text("Что-то пошло не так", timeout)
+        except:
+            self.wait_for_text("Не удалось проложить маршрут", timeout)
+
