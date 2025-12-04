@@ -2,7 +2,7 @@
 
 class Constants:
     # константа "откуда"
-    LOCATORS_FROM = 'Москва'
+    LOCATORS_FROM = 'Москва, Город'
     # константа "куда"
     LOCATORS_TO = 'Ереван, Город'
     # константа "куда"
